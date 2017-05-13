@@ -1,0 +1,12 @@
+<template name="main">
+  {{#if Template.subscriptionsReady}}
+    <header>
+      {{> Template.dynamic template=topbar}}
+    </header>
+    <main>
+      {{> Template.dynamic template=content}}
+    </main>
+  {{else}}
+    Still Loading
+  {{/if}}
+</template>
