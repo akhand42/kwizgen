@@ -1,0 +1,38 @@
+<template name="quizView">
+  <link rel=stylesheet href=/css/newstyle.css media=screen>
+  <script src=/assets/main.js charset=utf-8></script>
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Alegreya" rel=stylesheet>
+  <div class=container>
+      <div id=splash>
+          <div id=meta>
+              <span id=title>{{quiz.title}}</span>
+              <br/>
+              <span id=day>{{quizDate}}</span>
+          </div>
+          <ul id=rules>
+            {{#each quiz.rules}}
+              <li>{{newRule}}</li>
+            {{/each}}
+          </ul>
+          <button id=start onclick=scrollToGrid()>Start</button>
+          <br/>
+          <button id=access onclick=invert()><i class = "fa fa-eye fa-fw fa-2x" aria-hidden = true></i>
+    </button>
+      </div>
+  </div>
+  <div class=container>
+      <div id=gridfield>
+          <table id=grid>
+            {{#each quiz.questions}}
+            <tr>
+              <td>
+                {{newQuestion}}
+                <br>
+                {{newAnswer}}
+              </td>
+            </tr>
+            {{/each}}
+          </table>
+      </div>
+  </div>
+</template>

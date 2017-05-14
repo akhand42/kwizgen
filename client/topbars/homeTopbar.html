@@ -1,34 +1,20 @@
 <template name="homeTopbar">
-    <div class="container" style="padding-top:8px">
-      <div class="ui borderless inverted menu">
-        <a class="header item" href="/">
-          <h3>Quizgen</h3>
-        </a>
-        <a class="item" href="">
-          View Public Quizzes
-        </a>
+  <div class="container">
+    <div class="row">
+    <div class = "new-header">
+      <div class="logo" style="font-size:2em;" onclick="location.href='/'"> <img src="/images/logo.png" alt="" style="height:3%;width:3%;"> <span style = "font-weight:400;">QUIZ</span>GEN {{#if currentUser}} <br><span style="font-size:0.4em!important;">{{currentUser.profile.name}}</span> {{/if}}</div>
+      <div class="nav">
+        <div class = "nav-opt"><a href="/public/quizzes">All Quizzes</a></div>
         {{#if currentUser}}
-          <div class="active right item">
-            {{> loginButtons}}
-          </div>
+          <div class = "nav-opt"><a href = "/private/quizzes">Your Quizzes</a></div>
+          <div class = "nav-opt"><a href = "/">Dashboard</a></div>
+          <div class = "nav-opt"><a class="logout" href="/">Logout</a></div>
         {{else}}
-          <a class=" active blue right item" href="/login">
-            <i class="anchor icon"></i> Sign In
-          </a>
-          <a class="active green item" href="/register">
-            <i class="send icon"></i> Register
-          </a>
+          <div class = "nav-opt"><a data-tab="login" href = "/">Sign In / Sign Up</a></div>
+          <!-- <div class = "nav-opt"><a data-tab="register" href="/">Sign Up</a></div> -->
         {{/if}}
-        <a class="active item"></a>
-        <!-- <div class="right item">
-          {{#if currentUser}}
-            {{> loginButtons}}
-            <div class="ui button youtube" onclick="location.href='/login'">Logout</div>
-          {{else}}
-            <div class="ui button linkedin" onclick="location.href='/login'">Register</div>
-            <div class="ui button facebook" onclick="location.href='/login'">Log In</div>
-          {{/if}}
-        </div> -->
       </div>
     </div>
+        </div>
+  </div>
 </template>

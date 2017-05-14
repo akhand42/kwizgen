@@ -42,9 +42,8 @@ check@1.2.5
 audit-argument-checks@1.0.7
 random@1.0.10
 underscore@1.0.10
-datariot:ganalytics
-mdg:seo
-mixmax:smart-disconnect
 accounts-facebook
-facebook-config-ui
 meteortoys:allthings
+facebook-config-ui
+service-configuration
+cfs:autoform

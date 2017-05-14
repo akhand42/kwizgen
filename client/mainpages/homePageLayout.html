@@ -1,17 +1,43 @@
 <template name="homePageLayout">
-<div class="container">
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-      <center>
-        <h1 style="font-size:500%">Quizgen</h1>
-        <h2></h2>
-      <div class="ui two massive buttons">
-        <div class="ui button primary" onclick="location.href='/login'">Sign In</div>
-        <div class="ui button secondary"  onclick="location.href='/register'">Register</div>
+  <div class="container">
+    <div class = "main">
+      <div class="row">
+        {{#if currentUser}}
+        <div class="col-md-6 col-md-offset-3 newcol">
+          <center>
+            <div>
+              <div class="ui fluid button massive facebook" onclick="location.href='/quiz/create'"> <i class="add icon"></i> Create a Quiz</div> <br>
+              <div class="ui fluid button massive youtube" onclick="location.href='/private/quizzes'"> <i class="list icon"></i> Your Quizzes</div>
+            </div>
+          </center>
+        </div>
+        {{else}}
+          <div class="col-md-6">
+            <div class = "text-pos">
+          		<!-- <div class = "heading">Everything secure. <br>
+          Everything passwordless.</div> -->
+              <h1 style="margin-top:200px;">Simplify Quizzing</h1>
+          		<div class = "new-text">An online tool to create, manage, view &amp; share quizzes</div>
+          		</div>
+          </div>
+          <div class="col-md-5" style="margin-top:1%">
+            <!-- <div class = "signup"></div> -->
+            <div class="ui top attached tabular menu">
+              <a class="item active" data-tab="register">Sign Up</a>
+              <a class="item" data-tab="login">Sign In</a>
+              <!-- <a class="item active" data-tab="third">Third</a> -->
+            </div>
+            <div class="ui bottom attached tab segment active" data-tab="register">
+              <div>
+                {{> atForm state='signUp'}}
+              </div>
+            </div>
+            <div class="ui bottom attached tab segment" data-tab="login">
+              {{> atForm state='signIn'}}
+            </div>
+          </div>
+          {{/if}}
       </div>
-      <div class="ui button">Vishrut</div>
-      </center>
     </div>
   </div>
-</div>
 </template>
