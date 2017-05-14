@@ -8,5 +8,15 @@
     "babel-runtime": "^6.23.0",
     "bcrypt": "^1.0.2",
     "meteor-node-stubs": "~0.2.4"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akhand42/quizgen-users/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
