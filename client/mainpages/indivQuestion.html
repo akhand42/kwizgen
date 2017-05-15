@@ -1,0 +1,36 @@
+<template name="indivQuestion">
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Alegreya" rel=stylesheet>
+  <link rel=stylesheet href=/css/newerstyle.css media=screen>
+
+<div class="row" id="quesField" >
+  <div class="col-md-12">
+    <center>
+      <span>{{quesNum}}</span>
+    </center>
+  </div>
+</div>
+<div class="row" id="question">
+  <div class="col-md-8 col-md-offset-2">
+    {{allQuestions}}
+    <br>
+  </div>
+</div>
+<div class="row" id="image">
+  <div class="col-md-8 col-md-offset-2">
+    <img src="{{imageURL}}" id="quesImage">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <center>
+      <div class="ui button fluid secondary answerBut" onclick="location.href='{{answerURL}}'">
+        View Answer
+      </div>
+      <br>
+      <div class="ui button fluid secondary" onclick="location.href='{{gridURL}}'">
+        Return to Grid
+      </div>
+    </center>
+  </div>
+</div>
+</template>

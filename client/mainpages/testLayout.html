@@ -1,0 +1,28 @@
+<template name="testLayout">
+  <link rel=stylesheet href=/css/newstyle.css media=screen>
+  <script src=/assets/main.js charset=utf-8></script>
+  <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Alegreya" rel=stylesheet>
+  <div class=container>
+    <div id=splash>
+      <div id=meta>
+        <span id=title>Inquizitivity</span>
+        <br/>
+        <span id=day></span>
+      </div>
+      <ul id=rules></ul>
+      <button id=start onclick=scrollToGrid()>Start</button>
+      <br/>
+      <button id=access onclick=invert()><i class = "fa fa-eye fa-fw fa-2x" aria-hidden = true></i></button>
+    </div>
+  </div>
+  <div class=container>
+    <div id=gridfield>
+      <table id=grid>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</template>

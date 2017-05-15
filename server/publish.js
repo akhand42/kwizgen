@@ -13,5 +13,10 @@ Meteor.publish('quizAuthor', function(){
 
 Meteor.publish('quiz',(id) => {
   check(id,String); // be sure to check the parameter(s) to your publication
-    return Quizzes.find({_id: id});
+    return Quizzes.find({_id: id}, {fields:{'title':1, 'venue':1, 'namesOfQM':1, 'date':1, 'rules':1}});
+});
+
+Meteor.publish('quizQuestions',(id) => {
+  check(id,String); // be sure to check the parameter(s) to your publication
+    return Quizzes.find({_id: id}, {fields: {'questions':1}});
 });

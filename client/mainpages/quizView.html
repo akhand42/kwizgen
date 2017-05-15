@@ -1,26 +1,41 @@
 <template name="quizView">
-  <link rel=stylesheet href=/css/newstyle.css media=screen>
+  <link rel=stylesheet href=/css/newerstyle.css media=screen>
   <script src=/assets/main.js charset=utf-8></script>
   <link href="https://fonts.googleapis.com/css?family=Pontano+Sans|Alegreya" rel=stylesheet>
-  <div class=container>
-      <div id=splash>
-          <div id=meta>
-              <span id=title>{{quiz.title}}</span>
-              <br/>
-              <span id=day>{{quizDate}}</span>
-          </div>
-          <ul id=rules>
-            {{#each quiz.rules}}
-              <li>{{newRule}}</li>
-            {{/each}}
-          </ul>
-          <button id=start onclick=scrollToGrid()>Start</button>
-          <br/>
-          <button id=access onclick=invert()><i class = "fa fa-eye fa-fw fa-2x" aria-hidden = true></i>
-    </button>
+  <div class=quiz-container>
+    <div id="splash">
+    <div class="row" style="margin:5%">
+      <div class="col-md-8 col-md-offset-2" style="text-align: center">
+        <span id=title>{{quiz.title}}</span>
+        <br/>
+        <span id=day>{{quizDate}}</span>
+        <br>
+        <span id=day>{{quiz.venue}}</span>
+        <br/>
+        <br/>
+        <span id="qm">{{quiz.namesOfQM}}</span>
+        <ul id=rules>
+          <span id="rulesTitle">Rules</span>
+          <br>
+          <br>
+          {{#each quiz.rules}}
+            <li>{{newRule}}</li>
+          {{/each}}
+        </ul>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 col-md-offset-5">
+        <div class="ui button fluid secondary" onclick="location.href='/quiz/{{quizId}}/questions'">Begin</div>
+        <!-- <br>
+        <center>
+          <div class="ui compact button" id="button4invert" onclick="invert()"><i class="fa fa-eye fa-fw fa-1.5x" aria-hidden = true></i></div>
+        </center> -->
+      </div>
+    </div>
+    </div>
   </div>
-  <div class=container>
+  <!-- <div class=quiz-container>
       <div id=gridfield>
           <table id=grid>
             {{#each quiz.questions}}
@@ -34,5 +49,5 @@
             {{/each}}
           </table>
       </div>
-  </div>
+  </div> -->
 </template>

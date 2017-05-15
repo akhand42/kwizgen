@@ -1,0 +1,34 @@
+<template name="gridView">
+  <link rel=stylesheet href=/css/newerstyle.css media=screen>
+  <div class="row" style="margin-top:2%; margin-bottom:2%">
+    <div class="col-md-12">
+      <center>
+        <!-- <table id="grid" class="ui four column table" style="">
+        <tbody>
+          <tr>
+            {{#each question}}
+            {{#each allQuestions}}
+              <td>
+                <a href="/quiz/{{quizId}}/question/{{inc @index}}">{{inc @index}}</a>
+              </td>
+              {{/each}}
+          </tr>
+        </tbody>
+      </table> -->
+      <div id="grid" class="ui four column grid" style="margin:0%">
+        {{#each allQuestions}}
+        <div class="column" style="margin:0%; padding:0%;">
+            <div class="ui fluid card" style="border-radius:0px;">
+              <div class="content">
+                <a class="header" href="/quiz/{{quizId}}/question/{{inc @index}}">{{inc @index}}</a>
+                <div class="description">
+                </div>
+              </div>
+            </div>
+          </div>
+          {{/each}}
+      </div>
+      </center>
+    </div>
+  </div>
+</template>

@@ -24,5 +24,8 @@ Template.quizView.helpers({
     idOfQuiz = FlowRouter.getParam("id");
     thisQuizRules = Quizzes.findOne({_id:idOfQuiz}).rules
     return thisQuizDate
+  },
+  quizId: function(){
+    return FlowRouter.getParam("id");
   }
 })

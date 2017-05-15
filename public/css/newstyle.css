@@ -80,14 +80,6 @@ button:hover, button:focus
   font-size: 1em;
 }
 
-#gridfield
-{
-  position : relative;
-  top : 30%;
-  transform: translateY(-30%);
-  width : 100%;
-}
-
 #grid
 {
   margin : 0 auto;
